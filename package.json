@@ -1,7 +1,7 @@
 {
   "name": "Friend_Finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A compatibility-based \"FriendFinder\" app.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,5 +21,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2"
-  }
+  },
+  "devDependencies": {}
 }
