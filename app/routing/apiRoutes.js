@@ -14,7 +14,7 @@ module.exports = function (app) {
         var bestMatch = {
             name: "",
             photo: "",
-            friendDif: 1000
+            friendDif: 100
         };
         // Take the result of the user's survey POST and parse it
         var userData = req.body;
