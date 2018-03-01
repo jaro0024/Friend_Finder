@@ -178,8 +178,16 @@
                 <a href="/api/friends">API Friends List</a> |
                 <a href="https://github.com/jaro0024/Friend_Finder" target="_blank">GitHub Repo</a>
             </div>
+            <br>
+            <div class="container">
+                <span>
+                    <small>
+                        <strong>&copy; Copyright 2018 Daniela Jaros</strong>
+                    </small>
+                </span>
+            </div>
+            <br>
         </footer>
-        <br>
 
         <!-- Modal -->
         <div id="resultsModal" class="modal fade" role="dialog">
@@ -207,17 +215,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer" align="center">
-        <div class="container">
-            <span>
-                <small>
-                    <strong>&copy; Copyright 2018 Daniela Jaros</strong>
-                </small>
-            </span>
-        </div>
-    </footer>
 
     <script type="text/javascript">
 
@@ -253,6 +250,8 @@
                     // Grabs the best match 
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
+                    $("#matchImg").attr("width", "300px");
+                    $("#matchImg").attr("height", "200px");
                     // Displays the best match on a modal
                     $("#resultsModal").modal("toggle");
                 });

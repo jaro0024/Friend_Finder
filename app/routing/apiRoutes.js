@@ -14,29 +14,31 @@ module.exports = function (app) {
         var bestMatch = {
             name: "",
             photo: "",
-            friendDifference: 1000
+            friendDif: 1000
         };
         // Take the result of the user's survey POST and parse it
         var userData = req.body;
         var userScores = userData.scores;
         // To calculate the difference between the user's scores and the scores of each user in database
-        var totalDifference = 0;
+        var totalDif = 0;
         // Loop through all users in database
         for (var i = 0; i < friends.length; i++) {
-            totalDifference = 0;
+            totalDif = 0;
             // Loop through the scores of all users
             for(var j = 0; j < friends[i].scores[j]; j++) {
                 // Calculate the difference between scores and add them into the totalDifference
-                totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+                totalDif += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
                 // Check if the sum is less than the differences of current best match
-                if(totalDifference <= bestMatch.friendDifference) {
+                if(totalDif <= bestMatch.friendDif) {
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
-                    bestMatch.friendDifference = totalDifference;
+                    bestMatch.friendDif = totalDif;
                 }
             }
         }
+        // Push new user data to the friends module
         friends.push(userData);
+        // Response for the best match in json
         res.json(bestMatch);
     });
 }
