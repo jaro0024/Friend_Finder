@@ -1,7 +1,7 @@
 # Friend_Finder
 
 ## Description
- A compatibility-based "FriendFinder" app. 
+ A compatibility-based "Friend Finder" app. 
 
 ## Technologies used
 * Express Server

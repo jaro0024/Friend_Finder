@@ -10,7 +10,7 @@ module.exports = function (app) {
     });
     // API POST Request of user data
     app.post("/api/friends", function (req, res) {
-        
+        // Object to hold best match data
         var bestMatch = {
             name: "",
             photo: "",
